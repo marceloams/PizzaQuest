@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaQuest - Find Your Perfect Pizza Match!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="language-selector">
+                <div class="dropdown">
+                    <button class="dropdown-btn" id="language-btn">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="flag-icon">
+                        <span>EN-US</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-content" id="language-dropdown">
+                        <div class="dropdown-item" data-lang="en">
+                            <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="flag-icon">
+                            <span>EN-US</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="pt">
+                            <img src="https://flagcdn.com/24x18/br.png" alt="PT" class="flag-icon">
+                            <span>PT-BR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <div class="pizza-emoji">🍕</div>
+                <h1 data-translate="title">PizzaQuest</h1>
+                <p class="tagline" data-translate="tagline">A Better Pizza is a Phone Call Away!</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="welcome-screen" class="screen active">
+                <div class="welcome-content">
+                    <h2 data-translate="welcome-title">Welcome to PizzaQuest!</h2>
+                    <p data-translate="welcome-text">Answer 5 personality questions and discover which pizza flavor matches your unique personality!</p>
+                    <button id="start-quiz" class="btn btn-primary" data-translate="start-btn">Start Your Pizza Journey</button>
+                </div>
+            </div>
+
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="question-counter">
+                        <span id="current-question">1</span> <span data-translate="of">of</span> 5
+                    </div>
+                    
+                    <div class="question-card">
+                        <h3 id="question-text"></h3>
+                        <div class="answers" id="answers-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <div class="result-container">
+                    <h2 data-translate="result-title">Your Perfect Pizza Match!</h2>
+                    <div class="pizza-result">
+                        <img id="pizza-image" src="" alt="Your Pizza" class="pizza-img">
+                        <div class="pizza-info">
+                            <h3 id="pizza-name"></h3>
+                            <p id="pizza-description"></p>
+                            <div class="personality-match">
+                                <h4 data-translate="why-matches">Why this matches you:</h4>
+                                <p id="personality-explanation"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="restart-quiz" class="btn btn-secondary" data-translate="restart-btn">Take Quiz Again</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 PizzaQuest - Powered by marceloams</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
